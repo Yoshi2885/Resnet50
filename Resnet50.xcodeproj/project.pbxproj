@@ -1,0 +1,587 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CE0C42242B21669A003DFEDA /* Resnet50App.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0C42232B21669A003DFEDA /* Resnet50App.swift */; };
+		CE0C42262B21669A003DFEDA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0C42252B21669A003DFEDA /* ContentView.swift */; };
+		CE0C42282B21669B003DFEDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE0C42272B21669B003DFEDA /* Assets.xcassets */; };
+		CE0C422B2B21669B003DFEDA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE0C422A2B21669B003DFEDA /* Preview Assets.xcassets */; };
+		CE0C42352B21669C003DFEDA /* Resnet50Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0C42342B21669C003DFEDA /* Resnet50Tests.swift */; };
+		CE0C423F2B21669C003DFEDA /* Resnet50UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0C423E2B21669C003DFEDA /* Resnet50UITests.swift */; };
+		CE0C42412B21669C003DFEDA /* Resnet50UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0C42402B21669C003DFEDA /* Resnet50UITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CE0C42312B21669C003DFEDA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE0C42182B21669A003DFEDA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE0C421F2B21669A003DFEDA;
+			remoteInfo = Resnet50;
+		};
+		CE0C423B2B21669C003DFEDA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE0C42182B21669A003DFEDA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE0C421F2B21669A003DFEDA;
+			remoteInfo = Resnet50;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CE0C42202B21669A003DFEDA /* Resnet50.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Resnet50.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE0C42232B21669A003DFEDA /* Resnet50App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resnet50App.swift; sourceTree = "<group>"; };
+		CE0C42252B21669A003DFEDA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CE0C42272B21669B003DFEDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE0C422A2B21669B003DFEDA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CE0C42302B21669C003DFEDA /* Resnet50Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Resnet50Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE0C42342B21669C003DFEDA /* Resnet50Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resnet50Tests.swift; sourceTree = "<group>"; };
+		CE0C423A2B21669C003DFEDA /* Resnet50UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Resnet50UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE0C423E2B21669C003DFEDA /* Resnet50UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resnet50UITests.swift; sourceTree = "<group>"; };
+		CE0C42402B21669C003DFEDA /* Resnet50UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resnet50UITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE0C421D2B21669A003DFEDA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE0C422D2B21669C003DFEDA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE0C42372B21669C003DFEDA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CE0C42172B21669A003DFEDA = {
+			isa = PBXGroup;
+			children = (
+				CE0C42222B21669A003DFEDA /* Resnet50 */,
+				CE0C42332B21669C003DFEDA /* Resnet50Tests */,
+				CE0C423D2B21669C003DFEDA /* Resnet50UITests */,
+				CE0C42212B21669A003DFEDA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CE0C42212B21669A003DFEDA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE0C42202B21669A003DFEDA /* Resnet50.app */,
+				CE0C42302B21669C003DFEDA /* Resnet50Tests.xctest */,
+				CE0C423A2B21669C003DFEDA /* Resnet50UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE0C42222B21669A003DFEDA /* Resnet50 */ = {
+			isa = PBXGroup;
+			children = (
+				CE0C42232B21669A003DFEDA /* Resnet50App.swift */,
+				CE0C42252B21669A003DFEDA /* ContentView.swift */,
+				CE0C42272B21669B003DFEDA /* Assets.xcassets */,
+				CE0C42292B21669B003DFEDA /* Preview Content */,
+			);
+			path = Resnet50;
+			sourceTree = "<group>";
+		};
+		CE0C42292B21669B003DFEDA /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				CE0C422A2B21669B003DFEDA /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CE0C42332B21669C003DFEDA /* Resnet50Tests */ = {
+			isa = PBXGroup;
+			children = (
+				CE0C42342B21669C003DFEDA /* Resnet50Tests.swift */,
+			);
+			path = Resnet50Tests;
+			sourceTree = "<group>";
+		};
+		CE0C423D2B21669C003DFEDA /* Resnet50UITests */ = {
+			isa = PBXGroup;
+			children = (
+				CE0C423E2B21669C003DFEDA /* Resnet50UITests.swift */,
+				CE0C42402B21669C003DFEDA /* Resnet50UITestsLaunchTests.swift */,
+			);
+			path = Resnet50UITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE0C421F2B21669A003DFEDA /* Resnet50 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE0C42442B21669C003DFEDA /* Build configuration list for PBXNativeTarget "Resnet50" */;
+			buildPhases = (
+				CE0C421C2B21669A003DFEDA /* Sources */,
+				CE0C421D2B21669A003DFEDA /* Frameworks */,
+				CE0C421E2B21669A003DFEDA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Resnet50;
+			productName = Resnet50;
+			productReference = CE0C42202B21669A003DFEDA /* Resnet50.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CE0C422F2B21669C003DFEDA /* Resnet50Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE0C42472B21669C003DFEDA /* Build configuration list for PBXNativeTarget "Resnet50Tests" */;
+			buildPhases = (
+				CE0C422C2B21669C003DFEDA /* Sources */,
+				CE0C422D2B21669C003DFEDA /* Frameworks */,
+				CE0C422E2B21669C003DFEDA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE0C42322B21669C003DFEDA /* PBXTargetDependency */,
+			);
+			name = Resnet50Tests;
+			productName = Resnet50Tests;
+			productReference = CE0C42302B21669C003DFEDA /* Resnet50Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CE0C42392B21669C003DFEDA /* Resnet50UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE0C424A2B21669C003DFEDA /* Build configuration list for PBXNativeTarget "Resnet50UITests" */;
+			buildPhases = (
+				CE0C42362B21669C003DFEDA /* Sources */,
+				CE0C42372B21669C003DFEDA /* Frameworks */,
+				CE0C42382B21669C003DFEDA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE0C423C2B21669C003DFEDA /* PBXTargetDependency */,
+			);
+			name = Resnet50UITests;
+			productName = Resnet50UITests;
+			productReference = CE0C423A2B21669C003DFEDA /* Resnet50UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE0C42182B21669A003DFEDA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					CE0C421F2B21669A003DFEDA = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					CE0C422F2B21669C003DFEDA = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = CE0C421F2B21669A003DFEDA;
+					};
+					CE0C42392B21669C003DFEDA = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = CE0C421F2B21669A003DFEDA;
+					};
+				};
+			};
+			buildConfigurationList = CE0C421B2B21669A003DFEDA /* Build configuration list for PBXProject "Resnet50" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CE0C42172B21669A003DFEDA;
+			productRefGroup = CE0C42212B21669A003DFEDA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE0C421F2B21669A003DFEDA /* Resnet50 */,
+				CE0C422F2B21669C003DFEDA /* Resnet50Tests */,
+				CE0C42392B21669C003DFEDA /* Resnet50UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE0C421E2B21669A003DFEDA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE0C422B2B21669B003DFEDA /* Preview Assets.xcassets in Resources */,
+				CE0C42282B21669B003DFEDA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE0C422E2B21669C003DFEDA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE0C42382B21669C003DFEDA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE0C421C2B21669A003DFEDA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE0C42262B21669A003DFEDA /* ContentView.swift in Sources */,
+				CE0C42242B21669A003DFEDA /* Resnet50App.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE0C422C2B21669C003DFEDA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE0C42352B21669C003DFEDA /* Resnet50Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE0C42362B21669C003DFEDA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE0C42412B21669C003DFEDA /* Resnet50UITestsLaunchTests.swift in Sources */,
+				CE0C423F2B21669C003DFEDA /* Resnet50UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CE0C42322B21669C003DFEDA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE0C421F2B21669A003DFEDA /* Resnet50 */;
+			targetProxy = CE0C42312B21669C003DFEDA /* PBXContainerItemProxy */;
+		};
+		CE0C423C2B21669C003DFEDA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE0C421F2B21669A003DFEDA /* Resnet50 */;
+			targetProxy = CE0C423B2B21669C003DFEDA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CE0C42422B21669C003DFEDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CE0C42432B21669C003DFEDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE0C42452B21669C003DFEDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Resnet50/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.g.tana.y.Resnet50;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CE0C42462B21669C003DFEDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Resnet50/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.g.tana.y.Resnet50;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CE0C42482B21669C003DFEDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.g.tana.y.Resnet50Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Resnet50.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Resnet50";
+			};
+			name = Debug;
+		};
+		CE0C42492B21669C003DFEDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.g.tana.y.Resnet50Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Resnet50.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Resnet50";
+			};
+			name = Release;
+		};
+		CE0C424B2B21669C003DFEDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.g.tana.y.Resnet50UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Resnet50;
+			};
+			name = Debug;
+		};
+		CE0C424C2B21669C003DFEDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.g.tana.y.Resnet50UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Resnet50;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE0C421B2B21669A003DFEDA /* Build configuration list for PBXProject "Resnet50" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE0C42422B21669C003DFEDA /* Debug */,
+				CE0C42432B21669C003DFEDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE0C42442B21669C003DFEDA /* Build configuration list for PBXNativeTarget "Resnet50" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE0C42452B21669C003DFEDA /* Debug */,
+				CE0C42462B21669C003DFEDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE0C42472B21669C003DFEDA /* Build configuration list for PBXNativeTarget "Resnet50Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE0C42482B21669C003DFEDA /* Debug */,
+				CE0C42492B21669C003DFEDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE0C424A2B21669C003DFEDA /* Build configuration list for PBXNativeTarget "Resnet50UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE0C424B2B21669C003DFEDA /* Debug */,
+				CE0C424C2B21669C003DFEDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CE0C42182B21669A003DFEDA /* Project object */;
+}
