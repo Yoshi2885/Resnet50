@@ -7,20 +7,21 @@
 
 import SwiftUI
 import AVFoundation
+import Combine
+import Vision
+import CoreML
 
 struct CameraView: View {
-    private let cameraManger = CameraManager()
+    @ObservedObject private var cameraManager = CameraManager()
 
     var body: some View {
         ZStack {
-            CameraPreview(session: cameraManger.session)
-            VStack {
-                Image(systemName: "globe")
-                    .imageScale(.large)
-                    .foregroundStyle(.tint)
-                Text("Hello, world!")
-                    .padding()
-            }
+            CameraPreview(session: cameraManager.session)
+
+            Text(cameraManager.classificationLabel)
+                .padding()
+                .background(Color.white)
+                .foregroundColor(.black)
         }
     }
 }
@@ -28,10 +29,12 @@ struct CameraView: View {
     CameraView()
 }
 
-class CameraManager: {
+class CameraManager: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, ObservableObject {
+    @Published var classificationLabel: String = ""
     internal let session = AVCaptureSession()
 
-    init() {
+    override init() {
+        super.init()
         checkCameraPermission()
         setupSession()
     }
@@ -60,22 +63,50 @@ class CameraManager: {
 
         do {
             let input = try AVCaptureDeviceInput(device: camera)
-            if session.canAddInput(input) {
-                session.addInput(input)
-            }
-
             let output = AVCaptureVideoDataOutput()
-            if session.canAddOutput(output) {
-                session.addOutput(output)
+            output.setSampleBufferDelegate(self, queue: DispatchQueue(label: "videoQueue"))
+
+            DispatchQueue.main.async {
+                if self.session.canAddInput(input) {
+                    self.session.addInput(input)
+                }
+
+                if self.session.canAddOutput(output) {
+                    self.session.addOutput(output)
+                }
             }
 
-            session.startRunning()
+            // startRunningをバックグラウンドスレッドで実行
+            DispatchQueue.global(qos: .userInitiated).async {
+                self.session.startRunning()
+            }
         } catch {
             print("error")
         }
     }
-}
 
+
+    func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
+        guard let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
+        classifyImage(pixelBuffer: pixelBuffer)
+    }
+    func classifyImage(pixelBuffer: CVPixelBuffer) {
+        guard let model = try? VNCoreMLModel(for: Resnet50(configuration: MLModelConfiguration()).model) else { return }
+
+        let request = VNCoreMLRequest(model: model) { [weak self] request, error in
+            guard let results = request.results as? [VNClassificationObservation],
+                  let topResult = results.first else { return }
+
+            DispatchQueue.main.async {
+                self?.classificationLabel = topResult.identifier
+            }
+        }
+
+        let handler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:])
+        try? handler.perform([request])
+    }
+
+}
 struct CameraPreview: UIViewRepresentable {
     var session: AVCaptureSession
 

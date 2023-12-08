@@ -67,40 +67,40 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             CameraView()
-            ScrollView {
-                LazyVGrid(columns: [GridItem(.adaptive(minimum: 100))]) {
-                    ForEach(imageNames, id: \.self) { name in
-                        Image(name)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 100, height: 100)
-                            .onTapGesture {
-                                self.selectedImageName = name
-                                classificationLable = ""
-                            }
-                    }
-                }
-            }
+//            ScrollView {
+//                LazyVGrid(columns: [GridItem(.adaptive(minimum: 100))]) {
+//                    ForEach(imageNames, id: \.self) { name in
+//                        Image(name)
+//                            .resizable()
+//                            .scaledToFit()
+//                            .frame(width: 100, height: 100)
+//                            .onTapGesture {
+//                                self.selectedImageName = name
+//                                classificationLable = ""
+//                            }
+//                    }
+//                }
+//            }
 
         }
         // 選択された画像の拡大表示
-        if let imageName = selectedImageName {
-            Text(classificationLable)
-                .font(.title)
-                .padding()
-
-            Image(imageName)
-                .resizable()
-                .scaledToFit()
-                .frame(width: 300, height: 300)
-
-            Button(action: {
-                classifyImage(named: imageName)
-            }, label: {
-                Text("この画像は何の画像？")
-                    .padding()
-            })
-        }
+//        if let imageName = selectedImageName {
+//            Text(classificationLable)
+//                .font(.title)
+//                .padding()
+//
+//            Image(imageName)
+//                .resizable()
+//                .scaledToFit()
+//                .frame(width: 300, height: 300)
+//
+//            Button(action: {
+//                classifyImage(named: imageName)
+//            }, label: {
+//                Text("この画像は何の画像？")
+//                    .padding()
+//            })
+//        }
     }
 }
 
