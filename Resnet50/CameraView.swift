@@ -126,28 +126,8 @@ class CameraManager: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, Obs
         let handler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:])
         try? handler.perform([request])
     }
-
-//    func classifyImage(pixelBuffer: CVPixelBuffer) {
-//        guard let model = try? VNCoreMLModel(for: Resnet50(configuration: MLModelConfiguration()).model) else { return }
-//
-//        let request = VNCoreMLRequest(model: model) { [weak self] request, error in
-//            guard let results = request.results as? [VNClassificationObservation],
-//                  let topResult = results.first else { return }
-//
-//            let confidence = topResult.confidence * 100 // 確率をパーセンテージに変換
-//            let label = topResult.identifier
-//            let resultString = "\(label)の確率は\(String(format: "%.2f", confidence))%"
-//
-//            DispatchQueue.main.async {
-//                self?.classificationLabel = resultString
-//            }
-//        }
-//
-//        let handler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:])
-//        try? handler.perform([request])
-//    }
-
 }
+
 struct CameraPreview: UIViewRepresentable {
     var session: AVCaptureSession
 
