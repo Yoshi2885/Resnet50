@@ -18,13 +18,20 @@ struct CameraView: View {
         ZStack {
             CameraPreview(session: cameraManager.session)
 
-            Text(cameraManager.classificationLabel)
-                .padding()
-                .background(Color.white)
-                .foregroundColor(.black)
+            VStack {
+                Spacer() // 画面上部を空ける
+                Text(cameraManager.classificationLabel)
+                    .font(.title) // フォントサイズを大きくする
+                    .padding()
+                    .background(Color.white.opacity(0.7)) // 背景色を設定
+                    .foregroundColor(.black)
+                    .cornerRadius(10) // 角を丸くする
+                    .padding() // 余白を設定
+            }
         }
     }
 }
+
 #Preview {
     CameraView()
 }
@@ -32,6 +39,7 @@ struct CameraView: View {
 class CameraManager: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, ObservableObject {
     @Published var classificationLabel: String = ""
     internal let session = AVCaptureSession()
+    private var lastInferenceTime = Date()
 
     override init() {
         super.init()
@@ -87,24 +95,57 @@ class CameraManager: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, Obs
 
 
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
-        guard let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
-        classifyImage(pixelBuffer: pixelBuffer)
+        let currentTime = Date()
+        let elapsedTime = currentTime.timeIntervalSince(lastInferenceTime)
+
+        if elapsedTime > 1.0 {
+            lastInferenceTime = currentTime
+
+            guard let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
+            classifyImage(pixelBuffer: pixelBuffer)
+        }
     }
+
+
     func classifyImage(pixelBuffer: CVPixelBuffer) {
         guard let model = try? VNCoreMLModel(for: Resnet50(configuration: MLModelConfiguration()).model) else { return }
 
         let request = VNCoreMLRequest(model: model) { [weak self] request, error in
             guard let results = request.results as? [VNClassificationObservation],
-                  let topResult = results.first else { return }
+                  let topResult = results.first else { return } // 最も確率が高い結果を取得
+
+            let confidence = topResult.confidence * 100 // 確率をパーセンテージに変換
+            let label = topResult.identifier
+            let resultString = "\(label)の確率は\(String(format: "%.2f", confidence))%"
 
             DispatchQueue.main.async {
-                self?.classificationLabel = topResult.identifier
+                self?.classificationLabel = resultString
             }
         }
 
         let handler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:])
         try? handler.perform([request])
     }
+
+//    func classifyImage(pixelBuffer: CVPixelBuffer) {
+//        guard let model = try? VNCoreMLModel(for: Resnet50(configuration: MLModelConfiguration()).model) else { return }
+//
+//        let request = VNCoreMLRequest(model: model) { [weak self] request, error in
+//            guard let results = request.results as? [VNClassificationObservation],
+//                  let topResult = results.first else { return }
+//
+//            let confidence = topResult.confidence * 100 // 確率をパーセンテージに変換
+//            let label = topResult.identifier
+//            let resultString = "\(label)の確率は\(String(format: "%.2f", confidence))%"
+//
+//            DispatchQueue.main.async {
+//                self?.classificationLabel = resultString
+//            }
+//        }
+//
+//        let handler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:])
+//        try? handler.perform([request])
+//    }
 
 }
 struct CameraPreview: UIViewRepresentable {
