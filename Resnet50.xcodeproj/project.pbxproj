@@ -16,6 +16,7 @@
 		CE0C42412B21669C003DFEDA /* Resnet50UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0C42402B21669C003DFEDA /* Resnet50UITestsLaunchTests.swift */; };
 		CE0C424E2B216720003DFEDA /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = CE0C424D2B216720003DFEDA /* Resnet50.mlmodel */; };
 		CE0C43A72B22F237003DFEDA /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0C43A62B22F237003DFEDA /* CameraView.swift */; };
+		CE6CD7C62B26A9EB00E7B651 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CE6CD7C52B26A9EB00E7B651 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		CE0C424D2B216720003DFEDA /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Resnet50.mlmodel; path = ../../../../../../../../Downloads/Resnet50.mlmodel; sourceTree = "<group>"; };
 		CE0C43A62B22F237003DFEDA /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		CE0C43A82B22F457003DFEDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CE6CD7C52B26A9EB00E7B651 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		CE0C42172B21669A003DFEDA = {
 			isa = PBXGroup;
 			children = (
+				CE6CD7C52B26A9EB00E7B651 /* README.md */,
 				CE0C42222B21669A003DFEDA /* Resnet50 */,
 				CE0C42332B21669C003DFEDA /* Resnet50Tests */,
 				CE0C423D2B21669C003DFEDA /* Resnet50UITests */,
@@ -239,6 +242,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE6CD7C62B26A9EB00E7B651 /* README.md in Resources */,
 				CE0C422B2B21669B003DFEDA /* Preview Assets.xcassets in Resources */,
 				CE0C42282B21669B003DFEDA /* Assets.xcassets in Resources */,
 			);
